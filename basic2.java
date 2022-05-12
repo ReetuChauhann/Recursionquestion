@@ -6,7 +6,7 @@ public class basic2 {
     static void print(int n){
          if(n==5){
              System.out.println(5);
-             return;
+             return; // returning the control of the program to the function call where it was called
          }
         System.out.println(n);
         print(n+1);
