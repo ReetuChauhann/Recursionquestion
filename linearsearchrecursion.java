@@ -5,6 +5,8 @@ public class linearsearchrecursion {
         System.out.println(ans);
         int ans2=existat(arr, 18, 0);
         System.out.println(ans2);
+        int ans3=existatfromlast(arr, 18, 5);
+        System.out.println(ans3);
 
     }
     
@@ -24,7 +26,16 @@ public class linearsearchrecursion {
     }else{
        return existat(arr, target, index+1);
     }
+  }
 
-       
+  static int existatfromlast(int[] arr,int target, int index){
+    if(index==-1){
+        return -1;
     }
+    if(arr[index]==target){
+    return index;
+    }else{
+       return existatfromlast(arr, target, index-1);
+    }
+  }
 }
